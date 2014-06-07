@@ -77,16 +77,16 @@ public fun <N> MutableVector<N>.toMutableImageVector(): MutableImageVector<N>
     override fun set_correct(index: Int, value: N) = this@toMutableImageVector.set(index, value)
 }
 
-public trait DoubleImageMatrix : ImageMatrix<Double>
-public trait FloatImageMatrix : ImageMatrix<Float>
-public trait LongImageMatrix : ImageMatrix<Long>
-public trait IntImageMatrix : ImageMatrix<Int>
-public trait ShortImageMatrix : ImageMatrix<Short>
-public trait ByteImageMatrix : ImageMatrix<Byte>
+public trait DoubleImageMatrix : ImageMatrix<Double>, DoubleMatrix
+public trait FloatImageMatrix : ImageMatrix<Float>, FloatMatrix
+public trait LongImageMatrix : ImageMatrix<Long>, LongMatrix
+public trait IntImageMatrix : ImageMatrix<Int>, IntMatrix
+public trait ShortImageMatrix : ImageMatrix<Short>, ShortMatrix
+public trait ByteImageMatrix : ImageMatrix<Byte>, ByteMatrix
 
-public trait DoubleImageVector : ImageVector<Double>
-public trait FloatImageVector : ImageVector<Float>
-public trait LongImageVector : ImageVector<Long>
-public trait IntImageVector : ImageVector<Int>
-public trait ShortImageVector : ImageVector<Short>
-public trait ByteImageVector : ImageVector<Byte>
+public trait DoubleImageVector : ImageVector<Double>, DoubleVector
+public trait FloatImageVector : ImageVector<Float>, FloatVector
+public trait LongImageVector : ImageVector<Long>, LongVector
+public trait IntImageVector : ImageVector<Int>, IntVector
+public trait ShortImageVector : ImageVector<Short>, ShortVector
+public trait ByteImageVector : ImageVector<Byte>, ByteVector
