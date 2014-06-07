@@ -31,4 +31,5 @@ public fun TwoDimensionObject.forAll(colRange: IntRange = 0..cols-1, rowRange: I
             f(SimpleCoordinates(col, row))
 }
 
-public fun TwoDimensionObject.equalSize(an: TwoDimensionObject): Boolean = this.cols == an.cols && this.rows == an.rows
+public fun OneDimensionObject.equalSize(other: OneDimensionObject): Boolean = this.size == other.size
+public fun TwoDimensionObject.equalSize(other: TwoDimensionObject): Boolean = this.cols == other.cols && this.rows == other.rows
