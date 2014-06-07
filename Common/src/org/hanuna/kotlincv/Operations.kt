@@ -19,7 +19,7 @@ public fun <X, Y, R> coordinatewiseOperation(im1: Matrix<X>, im2: Matrix<Y>, ope
     override fun get_correct(col: Int, row: Int): R = operation(im1[col,row], im2[col, row])
 }
 
-public fun <X, R> coordinatewiseOperation(im: ImageMatrix<X>, operation: (X) -> R): ImageMatrix<R>
+public fun <X, R> coordinatewiseOperation(im: Matrix<X>, operation: (X) -> R): ImageMatrix<R>
         = object : ImageMatrix<R> {
     override val cols: Int = im.cols
     override val rows: Int = im.rows
